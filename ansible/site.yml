@@ -2,8 +2,12 @@
 ---
 - hosts: srv001
   become: true
-  roles: []
-
-- hosts: srv002
-  become: true
-  roles: []
+  roles:
+    - bertvv.rh-base
+    - sepolicy
+    - bertvv.httpd
+    - bertvv.mariadb
+    - bertvv.wordpress
+    - phpmyadmin
+    - geerlingguy.drupal
+    - geerlingguy.drush

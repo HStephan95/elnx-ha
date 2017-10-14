@@ -1,7 +1,7 @@
 # Enterprise Linux Lab Report
 
-- Student name: 
-- Github repo: <https://github.com/HoGentTIN/elnx-USER.git>
+- Student name: Heirbaut Stephan
+- Github repo: <https://github.com/HStephan95/elnx-ha>
 
 Describe the goals of the current iteration in a short sentence.
 
@@ -9,9 +9,20 @@ Describe the goals of the current iteration in a short sentence.
 
 - list requirements for this iteration. Use [S.M.A.R.T.](https://en.wikipedia.org/wiki/SMART_criteria) criteria!
 
+- Doel: XXX
+- Geschatte tijd: XXX
+- Benodige tijd: XXX
+
 ## Test plan
 
 How are you going to verify that the requirements are met? The test plan is a detailed checklist of actions to take, including the expected result for each action, in order to prove your system meets the requirements. Part of this is running the automated tests, but it is not always possible to validate *all* requirements throught these tests.
+
+|Objectief|Korte beschrijving|Behaald|
+|---------|------------------|-------|
+|XXX|XXX|XXX|
+|XXX|XXX|XXX|
+|XXX|XXX|XXX|
+|XXX|XXX|XXX|
 
 ## Documentation
 
@@ -26,3 +37,9 @@ The test report is a transcript of the execution of the test plan, with the actu
 ## Resources
 
 List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
+
+### ResourcesOnderwerp1
+[Voorbeeld](https://www.voorbeeld.com)
+
+### ResourcesOnderwerp2
+[Voorbeeld](https://www.voorbeeld.com)
