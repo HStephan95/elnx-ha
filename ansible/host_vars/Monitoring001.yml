@@ -1,0 +1,18 @@
+#Role variabelen voor Monitoring002
+rhbase_repositories:
+  - epel-release
+
+rhbase_firewall_allow_services:
+  - http
+  - https
+
+rhbase_users:
+  - name: sheirbaut
+    comment: "Stephan Heirbaut"
+    groups: 
+      - users
+    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'
+    
+metricbeat_user: sheirbaut
+metricbeat_group: users
+metricbeat_create_user: true

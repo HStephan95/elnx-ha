@@ -1,0 +1,31 @@
+#Role variabelen voor HTTP001
+rhbase_repositories:
+  - epel-release
+
+rhbase_firewall_allow_services:
+  - http
+  - https
+  
+httpd_scripting: 'php'
+
+mariadb_databases:
+  - drupal
+
+mariadb_users:
+  - name: sheirbaut
+    password: TestPass123Test
+    priv: 'drupal.*:ALL'
+
+mariadb_root_password: TestPass123Test
+
+drupal_database: drupal
+drupal_user: sheirbaut
+drupal_password: TestPass123Test
+
+rhbase_users:
+  - name: sheirbaut
+    comment: "Stephan Heirbaut"
+    groups: 
+      - users
+      #Encryptie: crypt-sha512
+    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'

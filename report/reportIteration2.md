@@ -8,7 +8,7 @@ Voor deze iteratie gaan we LAMP-stack opstelling en er AB op los laten om de per
 ## Requirements
 
 - Doel: Ik wil in 2 weken tijd in staat zijn om een complete LAMP-stack te hebben opgesteld en de performance check te hebben afgerond.
-- Geschatte tijd: 7/10 tot 20/10
+- Geschatte tijd: 7/10 tot 27/10
 
 ## Test plan
 
@@ -30,29 +30,34 @@ Als eerste ben ik beginnen experimenteren met ApacheBench. Hiervoor heb ik een F
     [Test1.txt](TestGoogle10100.txt)
     [Test2.txt](TestMicrosoft10100.txt)
     [Test3.txt](TestMicrosoft1001000.txt)
-    
-Hierna ben ik begonnen met rollen toevoegen aan srv001 vanop Ansible Galaxy.
+
+Vervolgens heb ik vagrant-hosts.yml aangepast zodat ik 2 servers had voor mijn opstelling, met ip adressen in dezelfde range.
+
+Hierna ben ik begonnen met rollen toevoegen aan HTTP001 vanop Ansible Galaxy.
 
     - bertvv.rh-base
-    - sepolicy
     - bertvv.httpd
     - bertvv.mariadb
-    - bertvv.wordpress
-    - phpmyadmin
     - geerlingguy.drupal
     - geerlingguy.drush
     
-Met rh-base wordt er een basic installatie uitgevoerd van een RedHat distributie.
-Waarna deze beter wordt beveiligd met SELinux.
-Vervolgens installeer ik de Apache webserver en de databank ervoor met MariaDB en Wordpress.
-Als laatste installeer Drupal en Drush van Jeff Geerling voor het beheren van de php-applicatie.
+Met rh-base wordt er een basic installatie uitgevoerd van een RedHat distributie. Vervolgens installeer ik de Apache webserver en de databank ervoor met MariaDB en.
+Als laatste installeer Drupal en Drush van Jeff Geerling voor het opstellen van een php-applicatie.
 
-De applicatie die ik gebruik is ...
+De applicatie die ik ga gebruiken wordt gecompileerd aan de hand van drush make en kan ik daarna opslaan in de databank in de vorm van een .sql-bestand. Hierdoor kan ik telkens exact dezelfde applicatie gebruiken voor het testen bij elke iteratie. Dit is nog mijn grootste to-do, want MariaDB, Drupal en Drush willen niet echt meewerken.
 
-    * applicatie zoeken *
+Monitoring001 zal dienen als monitoring server. Vanaf hierop zal ik AB lanceren op HTTP001 en de applicatie die erop aan het draaien is.
+Ik ga AB op verschillende sterktes uitvoeren en met verschillende gebruikers vanop verschillende terminals vanop Monitoring001.
+De rollen die hierop staan zijn:
+    
+    - bertvv.rh-base
+    - sirkjohannsen.metricbeat
+    
+MetricBeat is een applicatie van Elastic voor het capteren van performantie van verschillende componenten, waaronder network performance. Want, hoewel AB een goede tools is om te testen, is de output van het commando een vrij naakt rapport. Via MetricBeat zal het mogelijk zijn om de performance een beetje meer in kannen en kruiken te gieten.
 
-Srv002 zal dienen als monitoring server. Vanaf hierop zal ik AB lanceren op srv001 en de applicatie die hij aan het draaien is.
-Ik ga AB op verschillende sterktes uitvoeren en met verschillende gebruikers vanop verschillende terminals vanop srv002.
+Aan de host_vars zijn ook al gedefinieerd waar ik er één geschreven heb voor HTTP001 en Monitoring001.  
+
+Voor HTTP001.yml en Monitoring001.yml heb ik de services van http en https toegelaten en de verschillende gebruikers geïnstastieerd. Bij HTTP001 kwam er dan ook nog eens bij dat ik de database ook nog geïnstastieerd heb.
 
 ## Test report
 
@@ -78,3 +83,4 @@ Dit zijn de resultaten van de testopstellingen:
 
 [Drush](http://www.drush.org/en/master/)
 
+[MetricBeats](https://www.elastic.co/downloads/beats/metricbeat)

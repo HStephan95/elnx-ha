@@ -1,13 +1,21 @@
 # site.yml
 ---
-- hosts: srv001
+- hosts: HTTP001
   become: true
+  vars_files:
+    - host_vars/HTTP001.yml
   roles:
     - bertvv.rh-base
-    - sepolicy
     - bertvv.httpd
+    #databank initialiseren via files/drupal.sql automatisatie
     - bertvv.mariadb
-    - bertvv.wordpress
-    - phpmyadmin
     - geerlingguy.drupal
     - geerlingguy.drush
+  
+- hosts: Monitoring001
+  become: true
+  vars_files:
+    - host_vars/Monitoring001.yml
+  roles:
+    - bertvv.rh-base
+    - sirkjohannsen.metricbeat

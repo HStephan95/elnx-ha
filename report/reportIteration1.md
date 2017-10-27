@@ -15,10 +15,10 @@ In iteratie 1 ga ik op zoek naar de nodige documentatie voor het kunnen opbouwen
 
 |Objectief|Korte beschrijving|Behaald|
 |---------|------------------|-------|
-|YouTube-links|De nodige ondersteunende filmpjes zoeken op YouTube, om toch al eens (half) te zien hoe andere mensen het doen||
-|RHEL sources|De pdf rade aan om zeker de bronnen van RHEL7 te gebruiken, dus deze moet ik zeker eens nakijken en de praktische eruit halen en opslaan||
-|Galaxy Roles|Op Galaxy Roles staat zo goed als alles al klaar. Je moet gewoon de juiste roles voor de juiste job nog vinden.||
-|E-book aangekocht|Het e-book van Geerling Guy werdt ook aangeraden. Aangezien deze continue geupdate wordt en aan een deftige prijs verkocht, ga ik deze ook aanschaffen.||
+|YouTube-links|De nodige ondersteunende filmpjes zoeken op YouTube, om toch al eens (half) te zien hoe andere mensen het doen|x|
+|RHEL sources|De pdf rade aan om zeker de bronnen van RHEL7 te gebruiken, dus deze moet ik zeker eens nakijken en de praktische eruit halen en opslaan|x|
+|Galaxy Roles|Op Galaxy Roles staat zo goed als alles al klaar. Je moet gewoon de juiste roles voor de juiste job nog vinden.|x|
+|E-book aangekocht|Het e-book van Geerling Guy werdt ook aangeraden. Aangezien deze continue geupdate wordt en aan een deftige prijs verkocht, ga ik deze ook aanschaffen.|x|
 
 ## Documentation
 
