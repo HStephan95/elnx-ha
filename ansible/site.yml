@@ -18,4 +18,4 @@
     - host_vars/Monitoring001.yml
   roles:
     - bertvv.rh-base
-    - sirkjohannsen.metricbeat
+    - mattidegrauwe.metricbeat
