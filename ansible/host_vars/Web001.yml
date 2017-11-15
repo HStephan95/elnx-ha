@@ -1,0 +1,49 @@
+#Role variabelen voor rhbase
+rhbase_repositories:
+  - epel-release
+
+rhbase_firewall_allow_services:
+  - http
+  - https
+  
+rhbase_firewall_interfaces:
+  - enp0s3
+  - enp0s8
+  
+rhbase_user_groups:
+  - users
+
+rhbase_users:
+  - name: stephan
+    comment: Administrator
+    groups: 
+      - users
+      #Encryptie: crypt-sha512
+    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'
+  
+httpd_scripting: 'php'
+
+#Aanmaken databank en user
+mariadb_databases:
+  - name: drupal
+    # initialize db
+    # init_script: files/script
+mariadb_users:
+  - name: stephan
+    password: Test12345
+    priv: 'drupal.*:ALL'
+
+mariadb_root_password: Test12345
+
+#Variabelen voor Drupal en Drush
+drupal_build_composer*: false
+drupal_build_makefile: true
+drush_makefile_path: "files/project.make.yml"
+drush_make_options: "--no-gitinfofile"
+drupal_core_path: "{{ drupal_deploy_dir }}/web"
+drupal_core_owner: "{{ ansible_ssh_user | default(ansible_env.SUDO_USER, true) | default(ansible_env.USER, true) | default(ansible_user_id) }}"
+drupal_db_user: stephan
+drupal_db_password: Test12345
+drupal_db_name: drupal
+drupal_db_backend: mysql
+drupal_db_host: "127.0.0.1"

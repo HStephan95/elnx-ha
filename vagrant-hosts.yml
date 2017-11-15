@@ -25,7 +25,8 @@
 #
 # [1] http://docs.vagrantup.com/v2/synced-folders/basic_usage.html
 ---
-- name: HTTP001
+- name: Web001
   ip: 192.168.56.10
+  
 - name: Monitoring001
   ip: 192.168.56.11
