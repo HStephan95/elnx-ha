@@ -57,3 +57,5 @@ De meeste informatie heb ik vrij makkelijk kunnen bekomen door de pdf van de cur
 [Getting Started with Pacemaker - Linux High Availability & Clustering](https://www.youtube.com/watch?v=Ow5rhYTbT34)
 
 [Netwerk monitoring met Net-SNMP](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/sect-System_Monitoring_Tools-Net-SNMP.html)
+
+[Anisble vault](https://leucos.github.io/articles/transparent-vault-revisited/)

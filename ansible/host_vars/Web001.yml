@@ -38,7 +38,7 @@ mariadb_root_password: Test12345
 #Variabelen voor Drupal en Drush
 drupal_build_composer*: false
 drupal_build_makefile: true
-drush_makefile_path: "files/project.make.yml"
+drush_makefile_path: "files/example.make.yml"
 drush_make_options: "--no-gitinfofile"
 drupal_core_path: "{{ drupal_deploy_dir }}/web"
 drupal_core_owner: "{{ ansible_ssh_user | default(ansible_env.SUDO_USER, true) | default(ansible_env.USER, true) | default(ansible_user_id) }}"

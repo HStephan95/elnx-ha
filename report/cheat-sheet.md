@@ -8,3 +8,4 @@ Use this file to write down the most important commands you encounter, so you ca
 - [Netwerkproblemen - how to](https://github.com/HStephan95/elnx-ha/blob/master/report/Netwerkproblemen%20troubleshooting%20-%20how%20to)
 - [Netwerkproblemen - commando's](https://github.com/HStephan95/elnx-ha/blob/master/report/Netwerkproblemen%20troubleshooting%20-%20commando's.md)
 - [SELinux troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/SELinux%20troubleshooting.md)
+- [Links]()
