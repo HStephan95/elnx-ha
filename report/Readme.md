@@ -9,3 +9,4 @@ Quick link naar alle verschillende docs
 - [Netwerkproblemen - commando's](https://github.com/HStephan95/elnx-ha/blob/master/report/Netwerkproblemen%20troubleshooting%20-%20commando's.md)
 - [SELinux troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/SELinux%20troubleshooting.md)
 - [Links](https://github.com/HStephan95/elnx-ha/blob/master/report/Links.md)
+- [Ansible tips](https://github.com/HStephan95/elnx-ha/blob/master/report/Ansible-tip.md)
