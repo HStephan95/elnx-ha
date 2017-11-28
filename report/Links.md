@@ -55,3 +55,5 @@
 ## Troubleshooting
 
 [Host-updater](https://github.com/cogitatio/vagrant-hostsupdater/issues/89)
+
+[WSOD](https://www.drupal.org/node/158043)

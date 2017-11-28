@@ -35,10 +35,24 @@ mariadb_users:
 
 mariadb_root_password: Test12345
 
+#Role variabalen Wordpress 
+#wordpress_database_host: 192.168.56.10
+#wordpress_database: wordpress
+#wordpress_user: wordpress_usr
+#wordpress_password: Test12345
+
 #Variabelen voor Drupal en Drush
 drupal_build_composer*: false
-drupal_database: drupal
-drupal_username: stephan
-drupal_password: Test12345
-drupal_database_host: localhost
-drupal_prefix: ''
+drupal_build_makefile: true
+drush_makefile_path: "files/example.make.yml"
+drush_make_options: "--no-gitinfofile"
+drupal_core_path: "{{ drupal_deploy_dir }}/web"
+drupal_core_owner: "{{ ansible_ssh_user | default(ansible_env.SUDO_USER, true) | default(ansible_env.USER, true) | default(ansible_user_id) }}"
+drupal_db_user: stephan
+drupal_db_password: Test12345
+drupal_db_name: drupal
+drupal_db_backend: mysql
+drupal_db_host: "127.0.0.1"
+
+#HTTPD
+httpd_DocumentRoot: "{{ drupal_deploy_dir }}/web"
