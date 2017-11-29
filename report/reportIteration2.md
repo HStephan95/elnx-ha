@@ -92,9 +92,11 @@ Hiermee kan ik nu wel de foutboodschap zien, maar veel had ik hier uiteindelijk 
 
 Op dit moment is het uitzoeken van de verschillende rollen en het schrijven van de variabelen ervoor best nog meegevallen. Maar, met het bouwen van de applicatie zit ik stilaan met de handen in de haren. Zeker door gebrek aan tijd de laatste paar weken (Projecten en Databanken hebben een prioriteit genomen).
 
+Tussendoor probeer ik ook eens mr. Geerling zijn Drupal-VM uit. Deze gebruikt al de benodigde Ansible rollen die hij zelf geschreven heeft + een voorbeeld .make.yml-file. Maar, ook dit gaat dus mis en zwaar. De VM heeft verschillende plug-ins nodig om te werken en deze hebben serieus gestoord met het werkende krijgen van al mijn andere rollen. Ik heb dus de VM maar weer verwijdert, en de plug-ins ook. Hierover ga ik nog een mail sturen naar mr. Geerling. Plus, daarin ga ik ook hulp vragen met betrekking tot het deployen van een applicatie. Gebruik ik nu beter Drush Make of Compose. Ik ga ook enige vragen stellen over het voorbeeld .make.yml-bestand en waarom dat mis ging op mijn applicatie. Ik ga wel moeten maken dat ik voeldoende documentatie erbij lever.
+
 Gelukkig is er wel vooruitgang geboekt. Via Matti De Grauwe kwam ik te weten dat zij ook MetricBeat gebruiken bij Team Green en hij heeft me zijn geschreven Ansible-Rol en configuratie aangeboden, plus hulp bij het configureren ervan. Dus, ansig, werkt deze server toch al. Helaas heb ik het nog niet echt kunnen testen, bij gebrek aan webserver.
 
-Na een laatste presentatie heeft Mr. Van Vreckem aangeraden om af te stappen van Mr. Geerling zijn rollen. Want, hoewel deze goed zijn, zijn ze misschien iets te uitgebreid (lees: moeilijk). Hij had ondertussen zelf al een Drupal rol geschreven en ik ben overgestapt op deze. Ik heb die dezelfde dag nog geïnstalleerd en alles loopt vrij foutloos nu. Mijn beide servers komen nu foutloos online.
+Na een laatste presentatie heeft mr. Van Vreckem aangeraden om af te stappen van mr. Geerling zijn rollen. Want, hoewel deze goed zijn, zijn ze misschien iets te uitgebreid (lees: moeilijk). Hij had ondertussen zelf al een Drupal rol geschreven en ik ben overgestapt op deze. Ik heb die dezelfde dag nog geïnstalleerd en alles loopt vrij foutloos nu. Mijn beide servers komen nu foutloos online.
 
 ## Test report
 
@@ -121,3 +123,17 @@ Dit zijn de resultaten van de testopstellingen:
 [Drush](http://www.drush.org/en/master/)
 
 [MetricBeats](https://www.elastic.co/downloads/beats/metricbeat)
+
+[Goodbye Drush Make, Hello Composer!](https://www.lullabot.com/articles/goodbye-drush-make-hello-composer)
+
+[https://projectricochet.com/blog/installing-drupal-using-drush-make#.Wh8WczdryUl](https://projectricochet.com/blog/installing-drupal-using-drush-make#.Wh8WczdryUl)
+
+[Using Drush Make - building a base Drupal installation through automation](https://stonebergdesign.com/blog/using-drush-make-building-base-drupal-installation-through-automation)
+
+[http://docs.drush.org/en/7.x/make/](http://docs.drush.org/en/7.x/make/)
+
+[https://www.youtube.com/watch?v=CMcvJI0PBs0](https://www.youtube.com/watch?v=CMcvJI0PBs0)
+
+[White Screen of Death](https://www.drupal.org/node/158043)
+
+[https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush](https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush)
