@@ -98,6 +98,32 @@ Gelukkig is er wel vooruitgang geboekt. Via Matti De Grauwe kwam ik te weten dat
 
 Na een laatste presentatie heeft mr. Van Vreckem aangeraden om af te stappen van mr. Geerling zijn rollen. Want, hoewel deze goed zijn, zijn ze misschien iets te uitgebreid (lees: moeilijk). Hij had ondertussen zelf al een Drupal rol geschreven en ik ben overgestapt op deze. Ik heb die dezelfde dag nog geïnstalleerd en alles loopt vrij foutloos nu. Mijn beide servers komen nu foutloos online.
 
+Nu de webserver in orde is. Is het mij gelukt om er een applicatie op te zetten. Voor de eerste ronde zal dit nog handmatig moeten gebeuren. Maar, hierna kan ik een export sql-bestand maken waarmee ik de databank telkens kan initializeren.
+
+Maar, er is wel nog werk aan mijn monitoring server. Er was wat verwarring tussen Matti en mij, waardoor ik dacht dat alle prerequisite rollen ook al opgenomen waren bij hem. Dat is normaal nu aangepast. Alleen moet er misschien nog iets verandert worden aan de configuratie. Want, de default-poorten zijn nog steeds 9200 en 5601. 5601 zal ik waarschijnlijk het best herleiden naar 80, voor mijn dashboard.
+
+In de tussentijd ook nog eens een foutje tegenkomen met Vagrant en VBox waarbij ik niet meer in staat was om te ssh-en in mijn servers. Gelukkig is dit relatief makkelijk opgelost met een kleine aanpassing met een textbestand. Voor de zekerheid heb ik ook een Bash-functie aangemaakt.
+De 2 aangeboden workarounds zijn:
+
+    export VAGRANT_PREFER_SYSTEM_BIN=1
+    
+of
+
+    set terminal to xterm-256color
+    
+Voor de zekerheid heb ik ook deze functie nog aangemaakt:
+
+    poort=$1
+    naam=$2
+
+    function sshing ()
+    {
+      ssh -p $poort -i /c/Users/$naam/.vagrant.d/insecure_private_key vagrant@127.0.0.1
+    }
+
+    sshing $naam $poort
+
+
 ## Test report
 
 The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
@@ -137,3 +163,5 @@ Dit zijn de resultaten van de testopstellingen:
 [White Screen of Death](https://www.drupal.org/node/158043)
 
 [https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush](https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush)
+
+[ Issues with shell when SSH-ing into Vagrant #9143 ](https://github.com/hashicorp/vagrant/issues/9143)

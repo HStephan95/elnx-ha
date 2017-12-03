@@ -10,6 +10,7 @@
     - bertvv.httpd
     - bertvv.mariadb
     - bertvv.drupal
+    - metricbeat
     #- geerlingguy.git
     #- geerlingguy.drush
     #- geerlingguy.drupal
@@ -22,3 +23,6 @@
   roles:
     - bertvv.rh-base
     - metricbeat
+    - geerlingguy.kibana
+    - geerlingguy.java
+    - geerlingguy.elasticsearch
