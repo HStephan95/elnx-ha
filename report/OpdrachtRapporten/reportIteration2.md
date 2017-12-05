@@ -27,9 +27,9 @@ Make sure to write clean Markdown code, so your report looks good and is clearly
 
 Als eerste ben ik beginnen experimenteren met ApacheBench. Hiervoor heb ik een Fedora24 geïnstalleerd en enkele tests heb uitgevoerd.
 
-    [Test1.txt](TestGoogle10100.txt)
-    [Test2.txt](TestMicrosoft10100.txt)
-    [Test3.txt](TestMicrosoft1001000.txt)
+    [Test1.txt](https://github.com/HStephan95/elnx-ha/blob/master/report/OpdrachtRapporten/TestGoogle10100.txt)
+    [Test2.txt](https://github.com/HStephan95/elnx-ha/blob/master/report/OpdrachtRapporten/TestMicrosoft10100.txt)
+    [Test3.txt](https://github.com/HStephan95/elnx-ha/blob/master/report/OpdrachtRapporten/TestMicrosoft1001000.txt)
 
 Vervolgens heb ik vagrant-hosts.yml aangepast zodat ik 2 servers had voor mijn opstelling, met ip adressen in dezelfde range.
 
