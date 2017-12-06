@@ -98,7 +98,7 @@ Gelukkig is er wel vooruitgang geboekt. Via Matti De Grauwe kwam ik te weten dat
 
 Na een laatste presentatie heeft mr. Van Vreckem aangeraden om af te stappen van mr. Geerling zijn rollen. Want, hoewel deze goed zijn, zijn ze misschien iets te uitgebreid (lees: moeilijk). Hij had ondertussen zelf al een Drupal rol geschreven en ik ben overgestapt op deze. Ik heb die dezelfde dag nog geïnstalleerd en alles loopt vrij foutloos nu. Mijn beide servers komen nu foutloos online.
 
-Nu de webserver in orde is. Is het mij gelukt om er een applicatie op te zetten. Voor de eerste ronde zal dit nog handmatig moeten gebeuren. Maar, hierna kan ik een export sql-bestand maken waarmee ik de databank telkens kan initializeren.
+Nu de installatie van de webserver verloopt zonder foutmeldingen. Is het mij gelukt om er een applicatie op te zetten. Voor de eerste ronde zal dit nog handmatig moeten gebeuren. Maar, hierna kan ik een export sql-bestand maken waarmee ik de databank telkens kan initializeren.
 
 Maar, er is wel nog werk aan mijn monitoring server. Er was wat verwarring tussen Matti en mij, waardoor ik dacht dat alle prerequisite rollen ook al opgenomen waren bij hem. Dat is normaal nu aangepast. Alleen moet er misschien nog iets verandert worden aan de configuratie. Want, de default-poorten zijn nog steeds 9200 en 5601. 5601 zal ik waarschijnlijk het best herleiden naar 80, voor mijn dashboard.
 
@@ -122,6 +122,53 @@ Voor de zekerheid heb ik ook deze functie nog aangemaakt:
     }
 
     sshing $naam $poort
+
+Bij Kibana heb ik ook nog even '*' moeten aanuiden als Default Index Pattern.
+
+Door nu handmatig een applicatie aangemaakt te hebben en met een beetje hulp van Matti De Grauwe voor het configureren van Kibana kan ik nu de eerste loadtesting beginnen uitvoeren.
+
+Met mijn eerste test lukte het al om de applicatie neer te halen. Maar, misschien was ik er iets te aggresief in. Ik voerde namelijk het volgende in:
+
+    ab -n 1000 -c 100 http://192.168.56.10/drupal7/
+    
+Er werden dus 1000 requests in totaal gevraagd, waarbij er 100 tegelijk verzonden werden. Voor deze basic opstelling was dit misschien al een beetje ambitieus.
+
+    Usage: ab [options] [http[s]://]hostname[:port]/path
+    Options are:
+        -n requests     Number of requests to perform
+        -c concurrency  Number of multiple requests to make
+        -t timelimit    Seconds to max. wait for responses
+        -b windowsize   Size of TCP send/receive buffer, in bytes
+        -p postfile     File containing data to POST. Remember also to set -T
+        -T content-type Content-type header for POSTing, eg.
+            'application/x-www-form-urlencoded'
+            Default is 'text/plain'
+        -v verbosity    How much troubleshooting info to print
+        -w              Print out results in HTML tables
+        -i              Use HEAD instead of GET
+        -x attributes   String to insert as table attributes
+        -y attributes   String to insert as tr attributes
+        -z attributes   String to insert as td or th attributes
+        -C attribute    Add cookie, eg. 'Apache=1234. (repeatable)
+        -H attribute    Add Arbitrary header line, eg. 'Accept-Encoding: gzip'
+            Inserted after all normal header lines. (repeatable)
+        -A attribute    Add Basic WWW Authentication, the attributes
+            are a colon separated username and password.
+        -P attribute    Add Basic Proxy Authentication, the attributes
+            are a colon separated username and password.
+        -X proxy:port   Proxyserver and port number to use
+        -V              Print version number and exit
+        -k              Use HTTP KeepAlive feature
+        -d              Do not show percentiles served table.
+        -S              Do not show confidence estimators and warnings.
+        -g filename     Output collected data to gnuplot format file.
+        -e filename     Output CSV file with percentages served
+        -r              Don't exit on socket receive errors.
+        -h              Display usage information (this message)
+        -Z ciphersuite  Specify SSL/TLS cipher suite (See openssl ciphers)
+        -f protocol     Specify SSL/TLS protocol (SSL2, SSL3, TLS1, or ALL)
+
+
 
 
 ## Test report
