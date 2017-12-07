@@ -182,14 +182,16 @@ Deze bestanden worden allemaal gemount:
     
 ### Verdere statement types
 
+Deze worden minder gebruikt, maar worden ook gebruikt in '/etc/named.conf'.
+
 |KEYWORD|BESCHRIJVING|
 |-------|------------|
-|controls||
-|key||
-|logging||
-|server||
-|trusted-keys||
-|view||
+|controls|Voor het configureren van verschillende security requirements, die nodig zijn voor 'rndc' voor de 'named'-service|
+|key|Laat je toe om een gegeven statement te definiëren als een key. Deze worden gebruikt om verschillende acties te authorizeren (algorithm "algorithm-name" en secret "key-value")|
+|logging|Laat je toe om verschillende type van logs te bouwen (channels). Door channel optie te gebruiken in deze statement kun je een eigen bestand, grote, versie en severity definiëren. Deze worden ook gecategoriseerd door een category-option|
+|server|Hiermee kun je definiëren hoe de named-service moet reageren op remote namedservers.|
+|trusted-keys|Hiermee kun je trusted-keys definiëren.|
+|view|Met de view statement kun je speciale views creëeren. Hiermee kun je voor elke host een verschillend antwoord definiëren die zij ontvangen als ze dezelfde request sturen.|
 
 ## Editing Zone files
 
