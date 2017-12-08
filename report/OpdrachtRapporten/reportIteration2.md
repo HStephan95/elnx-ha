@@ -111,6 +111,19 @@ of
 
     set terminal to xterm-256color
     
+Verdere aanpassing gedaan van ssh.rb bestanden in  C:\HashiCorp\Vagrant\embedded\gems\gems\vagrant-1.8.1\lib\vagrant\util. Daar heb ik de volgende aanpassingen gedaan:
+
+    # if Util::Platform.windows?
+        # raise Errors::SSHUnavailableWindows, :host => ssh_info[:host],
+                                             # :port => ssh_info[:port],
+                                             # :username => ssh_info[:username],
+                                             # :key_path => ssh_info[:private_key_path]
+    # end
+
+    which = Util::Platform.windows? ? "where ssh >NUL 2>&1" : "which ssh >/dev/null 2>&1"
+    raise Errors::SSHUnavailable if !Kernel.system(which)
+
+    
 Voor de zekerheid heb ik ook deze functie nog aangemaakt:
 
     poort=$1
@@ -211,4 +224,6 @@ Dit zijn de resultaten van de testopstellingen:
 
 [https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush](https://cheekymonkeymedia.ca/blog/importing-and-exporting-databases-drush)
 
-[ Issues with shell when SSH-ing into Vagrant #9143 ](https://github.com/hashicorp/vagrant/issues/9143)
+[Issues with shell when SSH-ing into Vagrant #9143 ](https://github.com/hashicorp/vagrant/issues/9143)
+
+[Get SSH working on Vagrant/Windows/Git](https://gist.github.com/haf/2843680)
