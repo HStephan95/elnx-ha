@@ -119,3 +119,12 @@ Ik heb de service werkende gekregen en ik kan ook pingen van en naar de localhos
 ## Resources
 
 List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
+
+[DNS troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/Documentatie/DNS%20troubleshooting.md)
+[Vorige oefening troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/OpdrachtRapporten/report-netwerk-troubleshooting.md)
+[How to - troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/Documentatie/Netwerkproblemen%20troubleshooting%20-%20how%20to.md)
+[Netwerk troubleshooting commando's](https://github.com/HStephan95/elnx-ha/blob/master/report/Documentatie/Netwerkproblemen%20troubleshooting%20-%20commando's.md)
+[SELinux troubleshooting](https://github.com/HStephan95/elnx-ha/blob/master/report/Documentatie/SELinux%20troubleshooting.md)
+[Computerhope](https://www.computerhope.com/)
+[Dig](https://www.computerhope.com/unix/dig.htm)
+[CentOS Zone files](https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-bind-zone.html)
