@@ -114,7 +114,7 @@
 
 ## End result
 
-Ik heb de service werkende gekregen en ik kan ook pingen van en naar de localhost en een VM in hetzelfde netwerk. Maar, ik krijg geen enkele van de testen werkende. De fout met de interface en de service toevoegen aan de firewall was ook geen probleem. Maar, forward of reverse resolution is niet gelukt. Ik had wel door dat de fouten in de records zaten, maar ik zag ze niet in.
+Ik heb de service werkende gekregen en ik kan ook pingen van en naar de localhost en een VM in hetzelfde netwerk. Maar, ik krijg geen enkele van de testen werkende. De fout met de interface en de service toevoegen aan de firewall was ook geen probleem. Maar, forward of reverse resolution is niet gelukt. Ik had wel door dat er fouten in de records zaten en dat er een record voor reverse lookups moest aangemaakt worden. Maar, ik zag de fouten in de records niet. Achteraf dan gehoord dat ik beter had moeten kijken, want er bleken niet één maar meerdere '.' te ontbreken. Beetje stom.
 
 ## Resources
 

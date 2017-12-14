@@ -39,6 +39,12 @@ mariadb_users:
 
 mariadb_root_password: Test12345
 
+#MetricBeat vars
+metricbeat_user: stephan
+metricbeat_group: users
+metricbeat_create_user: true
+beats_config_file: "files/metricbeat.yml"
+
 #Variabelen voor Drupal en Drush
 drupal_build_composer*: false
 drupal_database: drupal

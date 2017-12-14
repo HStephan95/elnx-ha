@@ -102,6 +102,12 @@ Nu de installatie van de webserver verloopt zonder foutmeldingen. Is het mij gel
 
 Maar, er is wel nog werk aan mijn monitoring server. Er was wat verwarring tussen Matti en mij, waardoor ik dacht dat alle prerequisite rollen ook al opgenomen waren bij hem. Dat is normaal nu aangepast. Alleen moet er misschien nog iets verandert worden aan de configuratie. Want, de default-poorten zijn nog steeds 9200 en 5601. 5601 zal ik waarschijnlijk het best herleiden naar 80, voor mijn dashboard.
 
+De volgende rollen zijn dus toegevoegd + configuratie
+
+    - geerlingguy.kibana
+    - geerlingguy.java
+    - geerlingguy.elasticsearch
+
 In de tussentijd ook nog eens een foutje tegenkomen met Vagrant en VBox waarbij ik niet meer in staat was om te ssh-en in mijn servers. Gelukkig is dit relatief makkelijk opgelost met een kleine aanpassing met een textbestand. Voor de zekerheid heb ik ook een Bash-functie aangemaakt.
 De 2 aangeboden workarounds zijn:
 
@@ -227,3 +233,5 @@ Dit zijn de resultaten van de testopstellingen:
 [Issues with shell when SSH-ing into Vagrant #9143 ](https://github.com/hashicorp/vagrant/issues/9143)
 
 [Get SSH working on Vagrant/Windows/Git](https://gist.github.com/haf/2843680)
+
+[MetricBeat Reference](https://www.elastic.co/guide/en/beats/metricbeat/index.html)

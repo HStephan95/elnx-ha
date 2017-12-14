@@ -21,4 +21,4 @@ rhbase_users:
 metricbeat_user: stephan
 metricbeat_group: users
 metricbeat_create_user: true
-beats_config_file: files/metricbeat.yml
+beats_config_file: "files/metricbeat.yml"
