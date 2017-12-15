@@ -6,6 +6,7 @@
 |ip a|[device naam] vb.: em1, eno1, p1p1, enp0s3, w1p3s0b1|Toont informatie over de IP adressering van al je NIC's|
 |ip route|/|Toont routering informatie|
 |systemd-networkd|/|Traditioneel commando|
+|getent ahost|[adres]|DNS lookup wanneer dig niet geïnstalleerd|
 
 # Check services
 
