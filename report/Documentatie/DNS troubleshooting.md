@@ -253,6 +253,10 @@ Format voorbeeld:
 
 ## Protips
 
+- named-checkconf /etc/zone-bestand.conf
+    - applicatielaag controle voor named
+- named-checkzone /etc/zone-bestand.conf
+    - applicatielaag controle voor named
 - /usr/share/doc/bind-version/
     - The main directory containing the most recent documentation. 
 - /usr/share/doc/bind-version/arm/
