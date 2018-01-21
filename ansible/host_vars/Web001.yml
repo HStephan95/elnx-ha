@@ -1,37 +1,8 @@
-#Role variabelen voor rhbase
-rhbase_repositories:
-  - epel-release
-
-rhbase_firewall_allow_services:
-  - http
-  - https
-  
-rhbase_firewall_allow_ports:
-  - 9200/tcp
-  - 5601/tcp
-  
-rhbase_firewall_interfaces:
-  - enp0s3
-  - enp0s8
-  
-rhbase_user_groups:
-  - users
-
-rhbase_users:
-  - name: stephan
-    comment: Administrator
-    groups: 
-      - users
-      #Encryptie: crypt-sha512
-    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'
-  
-httpd_scripting: 'php'
-
 #Aanmaken databank en user
 mariadb_databases:
   - name: drupal
     # initialize db
-    # init_script: files/script
+    # init_script: /ansible/files/database_init.sql
 mariadb_users:
   - name: stephan
     password: Test12345
@@ -39,11 +10,8 @@ mariadb_users:
 
 mariadb_root_password: Test12345
 
-#MetricBeat vars
-metricbeat_user: stephan
-metricbeat_group: users
-metricbeat_create_user: true
-beats_config_file: "files/metricbeat.yml"
+#Role variabelen voor beat
+beats_config_file: "files/metricbeatWeb.yml"
 
 #Variabelen voor Drupal en Drush
 drupal_build_composer*: false

@@ -187,8 +187,36 @@ Er werden dus 1000 requests in totaal gevraagd, waarbij er 100 tegelijk verzonde
         -Z ciphersuite  Specify SSL/TLS cipher suite (See openssl ciphers)
         -f protocol     Specify SSL/TLS protocol (SSL2, SSL3, TLS1, or ALL)
 
+Ik heb de app geexporteerd met ´mysqldump´
 
+    mysqldump drupal > backup-file.sql
+    
+Hoewel het gelukt is om een dergelijk SQL bestand aan te maken ziet het er naar uit dat het toch nog niet volledig in orde is.
 
+Data capteren blijft ook een probleem te zijn. Want, de monitoring server kan wel data van zichzelf capteren. Maar, nog niets van de webserver. Hiervoor ga ik nog een paar vragen stellen aan Matti.
+
+Maar, in de tussentijd heb ik al eens gekeken of SELinux niet het probleem is door deze op uit te schakelen met ´setenforce 0´.
+
+TCPDump hierna heb ik TCPDump geïnstalleerd en de packet flow beginnen capteren. ICMP berichten komen alle sinds wel al toe van de web- naar de monitoringserver.
+
+Na een paar configuratiewijzigingen is alles in orde nu.
+Er moest nog een rol toegevoegd worden:
+    
+    Webserver:
+    - metricbeat
+    
+en een paar expliciete configuraties toegevoegd worden:
+
+    Monitoring:
+    #Role variabelen voor kibana
+    kibana_server_port: 5601
+    kibana_elasticsearch_url: "http://192.168.56.11:9200"
+
+    #Role variabelen voor elasticsearch
+    elasticsearch_network_host: "192.168.56.11"
+    elasticsearch_http_port: 9200
+    elasticsearch_script_inline: true
+    elasticsearch_script_indexed: true
 
 ## Test report
 
@@ -235,3 +263,7 @@ Dit zijn de resultaten van de testopstellingen:
 [Get SSH working on Vagrant/Windows/Git](https://gist.github.com/haf/2843680)
 
 [MetricBeat Reference](https://www.elastic.co/guide/en/beats/metricbeat/index.html)
+
+[MySQLDump](https://mariadb.com/kb/en/library/mysqldump/)
+
+[SCP](https://linux.die.net/man/1/scp)

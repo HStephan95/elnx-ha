@@ -1,24 +1,12 @@
-#Role variabelen voor rhbase
-rhbase_repositories:
-  - epel-release
-
-rhbase_firewall_allow_ports:
-  - 9200/tcp
-  - 5601/tcp
-
-rhbase_firewall_allow_services:
-  - http
-  - https
-
-rhbase_users:
-  - name: stephan
-    comment: "Stephan Heirbaut"
-    groups: 
-      - users
-    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'
-  
 #Role variabelen voor beat
-metricbeat_user: stephan
-metricbeat_group: users
-metricbeat_create_user: true
 beats_config_file: "files/metricbeat.yml"
+
+#Role variabelen voor kibana
+kibana_server_port: 5601
+kibana_elasticsearch_url: "http://192.168.56.11:9200"
+
+#Role variabelen voor elasticsearch
+elasticsearch_network_host: "192.168.56.11"
+elasticsearch_http_port: 9200
+elasticsearch_script_inline: true
+elasticsearch_script_indexed: true

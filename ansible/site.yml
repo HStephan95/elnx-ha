@@ -10,6 +10,7 @@
     - bertvv.httpd
     - bertvv.mariadb
     - bertvv.drupal
+    - metricbeat
     #- geerlingguy.git
     #- geerlingguy.drush
     #- geerlingguy.drupal
