@@ -9,6 +9,7 @@ rhbase_firewall_allow_services:
   - http
   - https
   - elasticsearch
+  - mysql
   
 rhbase_firewall_allow_ports:
   - 9200/tcp
@@ -27,7 +28,7 @@ rhbase_users:
     groups: 
       - users
       #Encryptie: crypt-sha512
-    password: '$6$CK4Epws1s589aSh8$tquZ7OXlfBZwFFPiO/79L5yRXO9XszgnaggpOQTonh0liGpYJLdx.nL/fXEHAHRx/0DNql.omWDpAookvbGbO.'
+    password: '$6$0C9FrU8V7CmI3xdy$IZ8hAEcMVf9EQUZrW5pBC2WQZHwkcGKpp7qKKbgsEs2d1fR63or/s3k1Vu8fbwHvcaLo67QQ8s/twoXzEq87d1'
   
 httpd_scripting: 'php'
 

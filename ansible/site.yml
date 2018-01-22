@@ -8,7 +8,6 @@
   roles:
     - bertvv.rh-base
     - bertvv.httpd
-    - bertvv.mariadb
     - bertvv.drupal
     - metricbeat
     #- geerlingguy.git
@@ -26,3 +25,12 @@
     - geerlingguy.kibana
     - geerlingguy.java
     - geerlingguy.elasticsearch
+    
+- hosts: Mariadb001
+  become: true
+  vars_files:
+   - host_vars/Mariadb001.yml
+  roles:
+    - bertvv.rh-base
+    - metricbeat
+    - bertvv.mariadb

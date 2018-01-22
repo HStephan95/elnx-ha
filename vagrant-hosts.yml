@@ -25,8 +25,13 @@
 #
 # [1] http://docs.vagrantup.com/v2/synced-folders/basic_usage.html
 ---
-- name: Web001
+- name: Mariadb001
   ip: 192.168.56.10
+
+- name: Web001
+  ip: 192.168.56.11
   
 - name: Monitoring001
-  ip: 192.168.56.11
+  ip: 192.168.56.12
+  
+  

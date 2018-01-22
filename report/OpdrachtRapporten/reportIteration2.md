@@ -16,8 +16,8 @@ Voor deze iteratie gaan we LAMP-stack opstelling en er AB op los laten om de per
 |---------|------------------|-------|
 |LAMP-stack opgestellen|De LAMP-stack lokaal clonen van GitHub.|X|
 |Monitoring opgestellen|De ApacheBenchmark-tool opstellen|X|
-|Monitoring uitvoeren|De nodige commando's uitvoeren voor het testen van de LAMP-stack||
-|Monitoring loggen|De output van de comando's in een bestand opslaan en dit bestand analyseren||
+|Monitoring uitvoeren|De nodige commando's uitvoeren voor het testen van de LAMP-stack|X|
+|Monitoring loggen|De output van de comando's in een bestand opslaan en dit bestand analyseren|X|
 
 ## Documentation
 
@@ -80,7 +80,7 @@ Momenteel schrijft Drush ook nog de bestanden weg naar de foute locatie. Maar, d
 Ik heb uiteindelijk besloten om een minimalistische variant van het .make.yml-bestand te gebruiken, in plaats van de uitgebreidde aangeboden door Drupal zelf. Deze compileerd gelukkig wel al. Maar, nog niet zonder fouten. Want, hoewel alles nu op de juiste locatie zat blijft mijn scherm nog wit. Wat ik wel eigenaardig vind.
 
 Na een beetje zoeken heb ik de reden waarom gevonden:
-By default tonen Drupal geschreven applicaties geen foutboodschappen op hun scherm. Dit met de veronderstelling dat het alleen maar de gebruiker meer verward en een last voor hen is. Terwijl een sys admin, vaak deze toch negeert en naar de sys logs gaat gaan kijken. Dit wordt door Drupal-gebruikers een [white screen of death(WSOD)][https://www.drupal.org/node/158043] genoemt. De manier waarop je foutboodschappen toch laat tonen is door deze lijntjes toe te voegen aan de index.php:
+By default tonen Drupal geschreven applicaties geen foutboodschappen op hun scherm. Dit met de veronderstelling dat het alleen maar de gebruiker meer verward en een last voor hen is. Terwijl een sys admin, vaak deze toch negeert en naar de sys logs gaat gaan kijken. Dit wordt door Drupal-gebruikers een [white screen of death(WSOD)](https://www.drupal.org/node/158043) genoemt. De manier waarop je foutboodschappen toch laat tonen is door deze lijntjes toe te voegen aan de index.php:
     
     <?php
 
@@ -189,7 +189,7 @@ Er werden dus 1000 requests in totaal gevraagd, waarbij er 100 tegelijk verzonde
 
 Ik heb de app geexporteerd met ´mysqldump´
 
-    mysqldump drupal > backup-file.sql
+    mysqldump -u stephan -p drupal > backupfile.sql
     
 Hoewel het gelukt is om een dergelijk SQL bestand aan te maken ziet het er naar uit dat het toch nog niet volledig in orde is.
 
@@ -220,11 +220,11 @@ en een paar expliciete configuraties toegevoegd worden:
 
 ## Test report
 
-The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+De lampstack kan getest door deze te installeren met ´Vagrant Up´en nadien naar ´192.168.56.10/drupal7/´ te surfen. Op dat IP zal er een Drupal site draaien.
 
-Dit zijn de resultaten van de testopstellingen:
+De monitoringserver zal ook al online staan en deze kan bekeken worden op ´192.168.56.11:9200´. Hierna moet je nog ´*´ in geven en ´@TimeStamp´ bij time-field name. Waarna je de performance kan controleren van de webserver.
 
-    * de struggle is real *
+Zoals eerder aangehaald wordt APBenchmark gebruikt om de loadtests uit te voeren. Hiervan heb ik al enkele logfiles van. Deze zijn aangemaakt door de output van het commando in een tekstbestand te herleiden.
 
 ## Resources
 
@@ -267,3 +267,5 @@ Dit zijn de resultaten van de testopstellingen:
 [MySQLDump](https://mariadb.com/kb/en/library/mysqldump/)
 
 [SCP](https://linux.die.net/man/1/scp)
+
+[SCP examples](https://www.computerhope.com/unix/scp.htm)

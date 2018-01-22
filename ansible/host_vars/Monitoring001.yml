@@ -3,10 +3,10 @@ beats_config_file: "files/metricbeat.yml"
 
 #Role variabelen voor kibana
 kibana_server_port: 5601
-kibana_elasticsearch_url: "http://192.168.56.11:9200"
+kibana_elasticsearch_url: "http://192.168.56.12:9200"
 
 #Role variabelen voor elasticsearch
-elasticsearch_network_host: "192.168.56.11"
+elasticsearch_network_host: "192.168.56.12"
 elasticsearch_http_port: 9200
 elasticsearch_script_inline: true
 elasticsearch_script_indexed: true

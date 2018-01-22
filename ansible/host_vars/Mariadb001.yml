@@ -1,0 +1,17 @@
+#Role variabelen voor beat
+beats_config_file: "files/metricbeatDb.yml"
+
+#Aanmaken databank en user
+mariadb_bind_address: '0.0.0.0'
+mariadb_databases:
+  - name: drupal
+    # initialize db
+    init_script: 'files/database_init.sql'
+mariadb_port: 3306
+mariadb_users:
+  - name: 'stephan'
+    password: 'Test12345'
+    priv: '*.*:ALL,GRANT'
+    host: '192.168.56.%'
+
+mariadb_root_password: 'Test12345'
