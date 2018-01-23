@@ -14,9 +14,9 @@ Voor deze iteratie gaan we LAMP-stack opstelling en er AB op los laten om de per
 
 |Objectief|Korte beschrijving|Behaald|
 |---------|------------------|-------|
-|Opstellen loadbalancer||
-|Configureren loadbalancer||
-|Verdere performance tests uitvoeren||
+|Opstellen loadbalancer|Server toevoegen aan vagrant-hosts en configuratiebestand toevoegen voor HAProxy|X|
+|Configureren loadbalancer|De juiste ip adressen van de webservers toevoegen aan het configuratiebestand, alsook andere variabelen declareren|X|
+|Verdere performance tests uitvoeren|Dezelfde loadtests als voorheen uitvoeren en de verschillen loggen|X|
 
 ## Documentation
 
