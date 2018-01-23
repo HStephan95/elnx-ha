@@ -41,9 +41,29 @@ Na enige verdere testing blijkt dat alles ook werkt als ik alles vanaf ´cookie�
     server Web001 192.168.56.12:80/drupal7/ cookie Web001 check
     server Web001 192.168.56.12:80/drupal7/
 
+Na het verder controleren van de logs kan het misschien eerder aan de kant van mijn webserver liggen. Doordat deze mijn requests weigert. Ik heb evenwel nog geen oplossing gevonden hiervoor. Aangezien alle correcte poorten opstaan en zelfs ´setenforce 0´ niets doet.
+
+Hierop zal ik dan mijn loadtesting uitvoeren. Bij gebrek aan het vinden van een nuttige oplossing.
+
+Net zoals voorheen voer ik dezelfde loadtests uit, van klein naar groot:
+
+    ab -n 10 -c 10 http://192.168.56.10/drupal7/
+    ab -n 100 -c 10 http://192.168.56.10/drupal7/
+    ab -n 1000 -c 10 http://192.168.56.10/drupal7/
+    ab -n 1000 -c 100 http://192.168.56.10/drupal7/
+    
+Tijdens en na het uitvoeren van deze loadtests draaide alles nog steeds stabiel, in tegenstelling to vorige iteraties. Daarom ben ik nog één stapje verder.
+
+    ab -n 10000 -c 1000 http://192.168.56.10/drupal7/
+    
+Ook deze requests heeft hij kunnen verwerken, albeit, moeizaam. Ik kon tijdens de test de webapplicatie wel nog openen via de browser vanop mijn eigen systeem.
+
 ## Test report
 
-The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+Het opstellen van HAProxy met de Ansible Rol van Mr. Geerling is vrij rechtoe-rechtaan. Zeker in combinatie met de documentatie die RedHat levert. Alleen voor ´error 503´, doordat het pad naar mijn webservers niet 100% klopt, heb ik geen oplossing gevonden.
+
+De performantie van de opstelling zonder of met loadbalancer is gigantisch. Waarbij eerdere iteraties al neergingen bij 10 x 100 requests, crashte de servers nog steeds niet bij 10 x 1000 requests.
+Toegegeven, het ging dan wel héél moeizaam en de applicatie die ik draai is héél basic. Maar, dat is mijn opstelling ook. Dus, om deze op grote schaal uit te werken is indrukwekkend.
 
 ## Resources
 
@@ -58,3 +78,5 @@ The test report is a transcript of the execution of the test plan, with the actu
 [HAProxy intro](http://cbonte.github.io/haproxy-dconv/1.9/intro.html)
 
 [HAProxy config manual](http://cbonte.github.io/haproxy-dconv/1.9/configuration.html)
+
+[Specific source IP](https://serverfault.com/questions/784438/haproxy-1-5-specific-source-ip-address-show-nosrv-503-sc-in-haproxy-log)

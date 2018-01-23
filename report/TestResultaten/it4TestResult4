@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.56.16 (be patient)
+
+
+Server Software:        Apache
+Server Hostname:        192.168.56.16
+Server Port:            80
+
+Document Path:          /drupal7/
+Document Length:        10391 bytes
+
+Concurrency Level:      100
+Time taken for tests:   51.951 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      10860000 bytes
+HTML transferred:       10391000 bytes
+Requests per second:    19.25 [#/sec] (mean)
+Time per request:       5195.101 [ms] (mean)
+Time per request:       51.951 [ms] (mean, across all concurrent requests)
+Transfer rate:          204.14 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    4   6.2      2      33
+Processing:  1196 5085 1054.5   5125    7948
+Waiting:     1130 4831 999.8   4831    7726
+Total:       1207 5089 1053.3   5128    7950
+
+Percentage of the requests served within a certain time (ms)
+  50%   5128
+  66%   5388
+  75%   5579
+  80%   5760
+  90%   6339
+  95%   6871
+  98%   7158
+  99%   7477
+ 100%   7950 (longest request)
