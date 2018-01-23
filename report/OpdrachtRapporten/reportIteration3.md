@@ -14,10 +14,10 @@ Voor deze iteratie gaan we LAMP-stack opstelling en er AB op los laten om de per
 
 |Objectief|Korte beschrijving|Behaald|
 |---------|------------------|-------|
-|Opstellen databankserver||
-|Verbinding maken tussen dbserver en webserver||
-|Performance hiervan loggen met de monitoringserver||
-|Verdere performance tests uitvoeren||
+|Opstellen databankserver|X|
+|Verbinding maken tussen dbserver en webserver|X|
+|Performance hiervan loggen met de monitoringserver|X|
+|Verdere performance tests uitvoeren|X|
 
 ## Documentation
 
@@ -64,15 +64,18 @@ Van klein naar groot zijn de volgende tests uitgevoerd:
     ab -n 1000 -c 10 http://192.168.56.10/drupal7/
     ab -n 1000 -c 100 http://192.168.56.10/drupal7/
     
-
+De load testen gingen al een pak beter.
+Maar bij de zwaarste faalde hij alsnog, en doordat er nog geen loadbalancer voorstaat worden er ook nog packets gedropt. Maar, blijven ze in plaats daarvan onbeantwoord.
 
 ## Test report
 
-The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+De databank zelf opstellen bleek een vrij makkelijke taak. Gewoon een nieuwe server toevoegen aan ´vagrant-hosts.yml´, de rollen verplaatsen in het ´site.yml-bestand en een nieuw .yml-configuratiebestand aanmaken.
 
-Dit zijn de resultaten van de testopstellingen:
+Over de connectie tussen deze nieuwe databank en de webserver heb ik even gestruikeld. Maar, was vrij rap opgelost door logisch en stapsgewijs te denken en testen.
 
-    * de struggle is real *
+Zodra dit dan ook in orde was kon ik de opstelling weer testen. Hardwarematig heb ik geen al te grote verschillen gemerkt. Omdat deze toch al niet overbelast waren om te beginnen.
+
+Maar, bij de laatste test heeft de opstelling het wel net iets langer gehouden dan de eerste keer.
 
 ## Resources
 

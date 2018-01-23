@@ -14,6 +14,26 @@
     #- geerlingguy.drush
     #- geerlingguy.drupal
     #- bertvv.wordpress
+    
+- hosts: Web002
+  become: true
+  vars_files:
+   - host_vars/Web001.yml
+  roles:
+    - bertvv.rh-base
+    - bertvv.httpd
+    - bertvv.drupal
+    - metricbeat
+    
+- hosts: Web003
+  become: true
+  vars_files:
+   - host_vars/Web001.yml
+  roles:
+    - bertvv.rh-base
+    - bertvv.httpd
+    - bertvv.drupal
+    - metricbeat
   
 - hosts: Monitoring001
   become: true
@@ -34,3 +54,11 @@
     - bertvv.rh-base
     - metricbeat
     - bertvv.mariadb
+    
+- hosts: HaProxy001
+  become: true
+  vars_files:
+   - host_vars/HaProxy001.yml
+  roles:
+    - bertvv.rh-base
+    - geerlingguy.haproxy

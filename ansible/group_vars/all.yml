@@ -10,7 +10,7 @@ rhbase_firewall_allow_services:
   - https
   - elasticsearch
   - mysql
-  
+
 rhbase_firewall_allow_ports:
   - 9200/tcp
   - 5601/tcp

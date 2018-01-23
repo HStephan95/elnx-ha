@@ -6,5 +6,5 @@ beats_config_file: "files/metricbeatWeb.yml"
 drupal_database: 'drupal'
 drupal_username: 'stephan'
 drupal_password: 'Test12345'
-drupal_database_host: '192.168.56.10'
+drupal_database_host: '192.168.56.11'
 drupal_prefix: ''

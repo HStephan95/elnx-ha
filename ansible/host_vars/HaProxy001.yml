@@ -1,0 +1,25 @@
+##Role variabelen voor HAProxy
+haproxy_socket: /var/lib/haproxy/stats
+
+haproxy_chroot: /var/lib/haproxy
+
+haproxy_user: haproxy
+haproxy_group: haproxy
+
+haproxy_frontend_name: 'hafrontend'
+haproxy_frontend_bind_address: '*'
+haproxy_frontend_port: 80
+haproxy_frontend_mode: 'http'
+
+haproxy_backend_name: 'habackend'
+haproxy_backend_mode: 'http'
+haproxy_backend_balance_method: 'roundrobin'
+haproxy_backend_httpchk: 'HEAD / HTTP/1.1\r\nHost:localhost'
+
+haproxy_backend_servers:
+  - name: Web001
+    address: 192.168.56.12:80/drupal7/
+  - name: Web002
+    address: 192.168.56.13:80/drupal7/
+  - name: Web003
+    address: 192.168.56.14:80/drupal7/
