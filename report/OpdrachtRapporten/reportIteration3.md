@@ -14,10 +14,10 @@ Voor deze iteratie gaan we LAMP-stack opstelling en er AB op los laten om de per
 
 |Objectief|Korte beschrijving|Behaald|
 |---------|------------------|-------|
-|Opstellen databankserver|X|
-|Verbinding maken tussen dbserver en webserver|X|
-|Performance hiervan loggen met de monitoringserver|X|
-|Verdere performance tests uitvoeren|X|
+|Opstellen databankserver|Server toevoegen aan Vagrant-hosts, rollen verplaatsen, configuratie in eigen yml-bestand zetten|X|
+|Verbinding maken tussen dbserver en webserver|Wijzig ip-adres databank in configuratie webserver en zet juiste poorten open|X|
+|Performance hiervan loggen met de monitoringserver|Metricbeat installeren op databankserver en kijken op Kibana of hij gevonden wordt|X|
+|Verdere performance tests uitvoeren|Dezelfde loadtests als voorheen uitvoeren en het verschil hiervan loggen|X|
 
 ## Documentation
 
