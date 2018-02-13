@@ -1,6 +1,5 @@
 # Evaluatie Enterprise Linux
 
-|Field          |Value                                              |
 | :---          | :---                                              |
 | Student       | Stephan HEIRBAUT                                  |
 | Klasgroep     | gent                                              |
@@ -20,11 +19,20 @@ W4:
 
 W9:
 
-- 
+Eindevaluatie:
+
+- Opstelling met 3 webservers, monitoring, MariaDB, HAProxy
+- Firewall-regels zouden host-specifiek moeten, en gebruik best ook enkel `--add-service` als die bestaat voor de service die je wil configureren.
+- Monitoring: metricbeat, Kibana
+    - Geen specifieke metrieken opgevolgd voor bv. Apache, MariaDB
+- Rolling updates niet gerealiseerd
+- Performantie:
+    - in eerste instantie is het netwerk de bottleneck
+    - in laatste opstelling is performantie veel beter, bottleneck lijkt nog altijd het netwerk te zijn.
 
 ### Eindbeoordeling
 
-O1: <BEOORDELING>
+O1: Gevorderd
 
 ## Troubleshooting
 
@@ -55,9 +63,11 @@ O2: Bekwaam
 
 ## Opdracht Actualiteit
 
+Drupal/metricbeat
+
 ### Eindbeoordeling
 
-O3: <BEOORDELING>
+O3: Bekwaam
 
 ## Rapportering
 
@@ -68,13 +78,13 @@ W4:
 - Rapport iteratie 1 getoond
 - info over HA plugin van RHEL bekeken
 
-R1: <BEOORDELING>
+R1: Gevorderd
 
 ### Demonstraties
 
-R2: <BEOORDELING>
+R2: Deskundig
 
 ### Cheat sheet
 
-R3: <BEOORDELING>
+R3: Gevorderd
 
